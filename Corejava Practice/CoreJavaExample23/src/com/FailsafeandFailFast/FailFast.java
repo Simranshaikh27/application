@@ -1,0 +1,44 @@
+package com.FailsafeandFailFast;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class FailFast {
+	
+	public static void main(String[] args) {
+		
+		List<Integer>al=new ArrayList<>();
+		al.add(10);
+		al.add(20);
+		al.add(30);
+		al.add(40);
+		
+		             Iterator<Integer>itr   =   al.iterator();
+		             while(itr.hasNext()) {
+		            Integer i	= itr.next();
+		           al.add(90);     //throws concurrent modification exception
+		                 System.out.println(i);
+		             }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

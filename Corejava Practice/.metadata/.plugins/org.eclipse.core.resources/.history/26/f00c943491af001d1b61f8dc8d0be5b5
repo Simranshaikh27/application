@@ -1,0 +1,5 @@
+package cm.jdbc;
+
+public class CreateTable {
+
+}

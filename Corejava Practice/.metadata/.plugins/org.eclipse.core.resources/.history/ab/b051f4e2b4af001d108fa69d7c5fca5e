@@ -1,0 +1,19 @@
+package com.Comparable;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Student s= new Student(3, "SIMRAN", "PUNE");
+		Student s1= new Student(4,"SAJJAD","SOLAPUR");
+		Student s2 = new Student(7, "GAURAV","DELHI");
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

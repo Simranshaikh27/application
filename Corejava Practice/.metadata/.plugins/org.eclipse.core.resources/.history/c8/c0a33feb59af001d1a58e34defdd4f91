@@ -1,0 +1,71 @@
+package com.collection.map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class AllUniversityList {
+
+	Map<String, Map<String,List<String>>>adduniversity(){
+		
+		List<String>sppu=new ArrayList<>();
+		sppu.add("emdineering");
+		sppu.add("architechture");
+		sppu.add("pharmacy");
+		
+		List<String>shivajiuniversity=new ArrayList<>();
+		shivajiuniversity.add("bba");
+		shivajiuniversity.add("bcom");
+		shivajiuniversity.add("bca");
+		
+		List<String>mumbaiuniversity=new ArrayList<>();
+		mumbaiuniversity.add("interior designing");
+		mumbaiuniversity.add("mba");
+		mumbaiuniversity.add("ca");
+		
+		Map<String, List<String>>maharashtrauniversity=new HashMap<>();
+		maharashtrauniversity.put("SPPU", sppu);
+		maharashtrauniversity.put("SHIVAJIUNIVERSITY", shivajiuniversity);
+		maharashtrauniversity.put("MUMBAIUNIVERSITY", mumbaiuniversity)
+		
+		Map<String, Map<String, List<String>>>allUniversity=new HashMap<>();
+		allUniversity.put("MAHARASHTRA", maharashtrauniversity);
+		return allUniversity;
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+		AllUniversityList allUniversitylist = new AllUniversityList();
+		Map<String, Map<String, List<String>>> university1 = allUniversitylist.adduniversity();
+
+		Set<String> key = university1.keySet();
+		Iterator<String> itr1 = key.iterator();
+		while (itr1.hasNext()) {
+			String keys = itr1.next();
+
+			System.out.println(keys);
+			Map<String, List<String>> university = university1.get(keys);
+			Set<String> university2 = university.keySet();
+			Iterator<String> itr2 = university2.iterator();
+			while (itr2.hasNext()) {
+				String uni2 = itr2.next();
+				System.out.println(uni2);
+				List<String> uni1 = university.get(uni2);
+				Iterator<String> itr3 = uni1.iterator();
+
+				while (itr3.hasNext()) {
+					String uni3 = itr3.next();
+					System.out.println(uni3);
+				}
+
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.collection.map;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class AllUniversityList {
+	
+	Map<String, Map<String,List<String>>>adduniversity(){
+		
+		List<String>sppu=new ArrayList<>();
+		sppu.add("emdineering");
+		sppu.add("architechture");
+		sppu.add("pharmacy");
+		
+		List<String>shivajiuniversity=new ArrayList<>();
+		shivajiuniversity.add("bba");
+		shivajiuniversity.add("bcom");
+		shivajiuniversity.add("bca");
+		
+		List<String>mumbaiuniversity=new ArrayList<>();
+		mumbaiuniversity.add("interior designing");
+		mumbaiuniversity.add("mba");
+		mumbaiuniversity.add("ca");
+		
+		Map<String, List<String>>maharashtrauniversity=new HashMap<>();
+		maharashtrauniversity.put("SPPU", sppu);
+		maharashtrauniversity.put("SHIVAJIUNIVERSITY", shivajiuniversity);
+		maharashtrauniversity.put("MUMBAIUNIVERSITY", mumbaiuniversity)
+		
+		Map<String, Map<String, List<String>>>allUniversity=new HashMap<>();
+		allUniversity.put("MAHARASHTRA", maharashtrauniversity);
+		return allUniversity;
+		
+		
+		
+		
+		
+	}
+
+}
